@@ -3,6 +3,8 @@
     overflow-x: hidden;
 
     background-color: black;
+    height: 100svh;
+    width: 100svw;
 }
 
 .divBlackOverlay {

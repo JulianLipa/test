@@ -81,7 +81,7 @@ export default function Home() {
 
   return (
     <main
-      className={`h-screen w-screen relative ${styles.mainSection}`}
+      className={`relative ${styles.mainSection}`}
       onMouseMove={handleMouseMove} // ✅ Detects dragging
       onMouseUp={handleMouseUp} // ✅ Stops dragging
       onMouseLeave={handleMouseUp} // ✅ Stops dragging if cursor leaves the screen
