@@ -1,3 +1,10 @@
+.mainSection{
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    background-color: black;
+}
+
 .divBlackOverlay {
   content: "";
   z-index: 100;
@@ -7,6 +14,7 @@
   grid-template-rows: repeat(auto-fill, 5vw);
   width: 100vw;
   height: 100vh;
+  
   overflow: hidden;
 }
 
