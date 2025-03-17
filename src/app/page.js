@@ -4,6 +4,8 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import styles from "@/app/page.module.css";
 
+import Gyroscope from "@/app/components/main/Gyroscope/Gyroscope";
+
 export default function Home() {
   const [gridItems, setGridItems] = useState([]);
   const [cols, setCols] = useState(0);
@@ -96,6 +98,7 @@ export default function Home() {
     >
       <div className="w-full h-full absolute">
         <div className={`w-full h-full absolute ${styles.divBlackOverlay}`}>
+          <Gyroscope />
           {gridItems.map((opacity, index) => (
             <div
               key={index}
