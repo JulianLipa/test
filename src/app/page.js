@@ -87,6 +87,7 @@ export default function Home() {
       onMouseLeave={handleMouseUp} // ✅ Stops dragging if cursor leaves the screen
       onTouchMove={handleMouseMove} // ✅ Mobile support
       onTouchEnd={handleMouseUp} // ✅ Mobile support
+      onTouchStart={(e) => e.preventDefault()}
     >
       <div className="w-full h-full absolute">
         <div className={`w-full h-full absolute ${styles.divBlackOverlay}`}>
