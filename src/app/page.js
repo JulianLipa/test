@@ -79,15 +79,20 @@ export default function Home() {
     isDragging.current = false;
   };
 
+  const handleTouchStart = (event) => {
+    event.preventDefault(); // Prevent default behavior
+    handleMouseMove(event);
+  };
+
   return (
     <main
-      className={`relative ${styles.mainSection}`}
+      className={`fixed ${styles.mainSection}`}
       onMouseMove={handleMouseMove} // ✅ Detects dragging
       onMouseUp={handleMouseUp} // ✅ Stops dragging
       onMouseLeave={handleMouseUp} // ✅ Stops dragging if cursor leaves the screen
       onTouchMove={handleMouseMove} // ✅ Mobile support
       onTouchEnd={handleMouseUp} // ✅ Mobile support
-      onTouchStart={(e) => e.preventDefault()}
+      onTouchStart={(e) => handleTouchStart(e)}
     >
       <div className="w-full h-full absolute">
         <div className={`w-full h-full absolute ${styles.divBlackOverlay}`}>
