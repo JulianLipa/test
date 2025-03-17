@@ -96,9 +96,9 @@ export default function Home() {
       onTouchEnd={handleMouseUp} // ✅ Mobile support
       onTouchStart={(e) => handleTouchStart(e)}
     >
+      <Gyroscope className="" />
       <div className="w-full h-full absolute">
         <div className={`w-full h-full absolute ${styles.divBlackOverlay}`}>
-          <Gyroscope />
           {gridItems.map((opacity, index) => (
             <div
               key={index}
